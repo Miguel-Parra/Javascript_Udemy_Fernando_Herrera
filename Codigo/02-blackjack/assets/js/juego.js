@@ -8,7 +8,8 @@
 let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const especiales = ['A', 'J', 'Q', 'K']
-
+//Referencias
+const btn_pedir = document.querySelector('#btn_pedir');
 //Esta funcion crea una nueva baraja
 const crearDeck = () => {
     for (let i = 2; i <= 10; i++) {
@@ -37,8 +38,8 @@ const pedirCarta = () => {
         throw 'No hay cartas en el deck'
     }
     const carta = deck.pop()
-    console.log(deck); //
-    console.log(carta); // carta debe ser de la baraja
+    // console.log(deck); //
+    // console.log(carta); // carta debe ser de la baraja
     return carta;
 }
 
@@ -49,5 +50,8 @@ const valorCarta = (carta) => {
     return !(isNaN(valor)) ? valor * 1 : (valor === 'A') ? 11 : 10;
 }
 
-const valor = valorCarta('8D'); //2 diamonds
-console.log({valor});
+// const valor = valorCarta(pedirCarta()); //2 diamonds
+// console.log({valor});
+
+//EVENTOS
+btn_pedir.addEventListener('focus')
