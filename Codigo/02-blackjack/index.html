@@ -15,9 +15,9 @@
     <header class="titulo">BLACKJACK</header>
     <div id="divBotones" class="row mt-4">
         <div class="col text-center">
-            <button id="btn_nuevo" class='btn btn-danger'>Nuevo Juego</button>
-            <button id="btn_pedir" class='btn btn-primary '>Pedir Carta</button>
-            <button id="btn_detener" class='btn btn-primary '>Detener</button>
+            <button id="btn_nuevo"  class='btn btn-danger'>Nuevo Juego</button>
+            <button id="btn_pedir" disabled class='btn btn-primary '>Pedir Carta</button>
+            <button id="btn_detener" disabled class='btn btn-primary '>Detener</button>
 
         </div>
     </div>
@@ -25,7 +25,7 @@
     <div class="row container">
         <div class="col">
             <h1>Jugador 1 - <small>0</small></h1>
-            <div id="jugador-cartas">
+            <div id="jugador-cartas" class="divCartas">
                 <!-- aqui se cilocará todas las cartas que el jugador va mostrando -->
                 <!-- <img class="carta" src="assets/cartas/10C.png"> -->
             </div>
@@ -37,7 +37,7 @@
     <div class="row container mt-2">
         <div class="col">
             <h1>Computadora - <small>0</small></h1>
-            <div id="computadora-cartas">
+            <div id="computadora-cartas" class="divCartas">
                 <!-- aqui se cilocará todas las cartas que el jugador va mostrando -->
                 <!-- <img class="carta" src="assets/cartas/3C.png"> -->
             </div>
@@ -45,7 +45,10 @@
     </div>
 
     <script src="assets/js/underscore-min.js"></script>
-    <script src="assets/js/juego.js"></script>
+    <script src="assets/js/juego-min.js"></script>
+    <script>
+        miModulo.nuevoJuego();
+    </script>
 </body>
 
 </html>
