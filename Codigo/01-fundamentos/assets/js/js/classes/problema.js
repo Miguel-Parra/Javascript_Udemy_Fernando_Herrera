@@ -24,5 +24,5 @@ this.imprimir =  function() {
 
 const maria = new Persona('Maria', 18)
 const pamela = new Persona('Pamela', 24)
-console.log(maria)
+console.log(maria.imprimir())
 console.log(pamela)
